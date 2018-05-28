@@ -3,13 +3,13 @@ const staticAssets = [
     './',
     './css/style.css',
     './index.html',
-    './js/app.js',
+    './js/app.js'
 ]
 
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cacheName).then(function (cache) {
-            console.log('[ServiceWorker] Caching app shell');       
+            console.log('[ServiceWorker] Caching app shell');
             return cache.addAll(staticAssets);
         })
     );
