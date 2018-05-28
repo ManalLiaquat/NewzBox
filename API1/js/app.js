@@ -49,7 +49,7 @@ async function  updatedNews(source = defineDefualt){
 }
 function createArticles(article){
 return `
-<div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2">
             <h2 class='h2'>${article.title}</h2>
             <img class="img-rounded" width='100%' src="${article.urlToImage}"/>
             <p class='h4'>${article.description}</p>
