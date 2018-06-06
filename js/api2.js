@@ -1,21 +1,12 @@
 
 var apikey = "20b039d631524aa790a42953ca629019";
 const main = document.querySelector("#div");
-// const selecter = document.querySelector("#selector");
-const defineDefualt = "the-washington-post";
 window.addEventListener('load', async e => {
     updatedNews();
-    // await updatedSource()
-    // selecter.value = defineDefualt;
-    // selector.addEventListener('change', e => {
-    //     updatedNews(e.target.value);
-    // })
-
-
 })
 
 
-async function updatedNews(sourse = defineDefualt) {
+async function updatedNews() {
     const res = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apikey}`)
     imagesArray = [];    
     const json = await res.json();
@@ -55,11 +46,3 @@ function createArticles(article) {
         </div>
         `
 }
-// async function updatedSource() {
-//     const res = await fetch(`https://newsapi.org/v1/sources`);
-//     const json = await res.json();
-//     console.log(json);
-//     selector.innerHTML = json.sources
-//         .map(src => `<option value="${src.id}">${src.name}</option>`).join('\n')
-
-// }
