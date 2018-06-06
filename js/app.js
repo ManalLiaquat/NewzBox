@@ -3,9 +3,10 @@ var apikey = "20b039d631524aa790a42953ca629019";
 const main = document.querySelector("#div");
 const selecter =  document.querySelector("#selector");
 const defineDefualt = "the-washington-post";
+
 window.addEventListener('load', async e =>{
-    updatedNews();
-    await updatedSource()
+    updatedSource();
+    await updatedNews();
     selecter.value =  defineDefualt;
         selector.addEventListener('change', e => {
             updatedNews(e.target.value);
@@ -30,7 +31,7 @@ async function  updatedNews(source = defineDefualt){
     document.getElementById('img').style.backgroundImage = "url(" + imagesArray[3] + ")"
     function images() {
         if (flag === imagesArray.length) {
-            flag = 0
+            flag = 0;
             // console.log(flag)
             document.getElementById('img').style.backgroundImage = "url(" + imagesArray[flag] + ")"
         }
