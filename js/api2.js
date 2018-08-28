@@ -35,7 +35,7 @@ async function updatedNews() {
         flag++
         images()
     }, 3000)
-    main.innerHTML = json.articles.map(createArticles).join('\n')
+    main.innerHTML += json.articles.map(createArticles).join('\n')
 }
 function createArticles(article) {
     return `
